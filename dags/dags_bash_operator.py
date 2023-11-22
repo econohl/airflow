@@ -12,6 +12,9 @@ from airflow.operators.bash import BashOperator
 # catchup : start_date와 현재일자간의 이전 작업을 실행할 것인지에 대한 옵션 
 #   1) false : start_date와 현재일자간의 이전 작업 ( 소급적재 안함 )
 #   2) true : start_date와 현재일자간의 이전 작업 ( 소급적재 진행 / 순차적 실행 아님 )
+# git status --> git add dags/***.py --> git commit -m "{메시지}" --> git push
+# (로컬 Terminal) git pull [ 경로 : /Users/1004811/Startground/airflow/dags ]
+
 
 with DAG(
     dag_id="dags_bash_operator",
@@ -24,7 +27,7 @@ with DAG(
     bash_t1 = BashOperator(
         task_id="bash_t1",
         bash_command="echo whoami",
-    )
+    ) 
 
     bash_t2 = BashOperator(
         task_id="bash_t2",
