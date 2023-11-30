@@ -13,6 +13,8 @@ from airflow.operators.email import EmailOperator
 # git status --> git add dags/***.py --> git commit -m "{메시지}" --> git push
 # (로컬 Terminal) git pull [ 경로 : /Users/1004811/Startground/airflow/dags ]
 
+# Google Email 세팅 : Google 홈 > (성현) 클릭 > google 계정관리 > [왼쪽 Tree] 보안 > 
+#                    Google에 로그인하는 방법 - 2단계 인증 > 앱 비밀번호 [ lvei zbio ljye cmsw ]
 
 with DAG(
     dag_id="dags_email_operator",
