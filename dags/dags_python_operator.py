@@ -2,7 +2,7 @@ from airflow import DAG
 import datetime
 import pendulum
 
-from ariflow.operator.python import PythonOperator
+from airflow.operators.python import PythonOperator
 import random
 
 # dag_id : python 파일명과 일치하는 것을 권장함. 
